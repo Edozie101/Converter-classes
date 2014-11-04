@@ -42,7 +42,20 @@ class TemperatureConverter
 
 
      end
+     def to_kelvin
+       if @unit == :kelvin
+         return @value
 
+       elsif @unit == :fahrenheit
+           return (@value + 241.15)* (5/9.to_f)
+       end
+
+
+     else
+
+       return @value + 273.15
+
+    end
 
 
 
