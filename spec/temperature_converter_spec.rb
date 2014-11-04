@@ -65,20 +65,20 @@ describe TemperatureConverter do
   end
 
   describe '#to_kelvin' do
-    xit "returns the original temperature when given kelvin" do
+    it "returns the original temperature when given kelvin" do
       converter = TemperatureConverter.new(:kelvin, 400)
 
       expect(converter.to_kelvin).to be == 400
     end
 
-    xit "returns the temperature in kelvin when given celsius" do
+    it "returns the temperature in kelvin when given celsius" do
       converter = TemperatureConverter.new(:celsius, 10)
 
       expect(converter.to_kelvin).to be == 283.15
     end
 
 
-    xit "returns the temperature in kelvin when given fahrenheit" do
+    it "returns the temperature in kelvin when given fahrenheit" do
       converter = TemperatureConverter.new(:fahrenheit, 100)
 
       expect(converter.to_kelvin).to be_within(0.1).of(310.95)
